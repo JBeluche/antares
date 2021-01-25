@@ -1,0 +1,977 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Antares Win32 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win32 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win32 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win32 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win32 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win32 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win32 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win32",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win64 Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares Win64 Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares Win64 Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"Win64",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares IOS Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares IOS DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares IOS Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Shipping Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Shipping Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares IOS Shipping Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Shipping Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Shipping",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Test Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Test Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"Antares IOS Test Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "Antares IOS Test Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"Antares",
+				"IOS",
+				"Test",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 Debug Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 Debug Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"AntaresEditor Win64 Debug Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 Debug Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"Debug",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 DebugGame Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 DebugGame Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"AntaresEditor Win64 DebugGame Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 DebugGame Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"DebugGame",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 Development Build",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 Development Rebuild",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Build.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"dependsOn": [
+				"AntaresEditor Win64 Development Clean"
+			],
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		},
+		{
+			"label": "AntaresEditor Win64 Development Clean",
+			"group": "build",
+			"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+			"args": [
+				"AntaresEditor",
+				"Win64",
+				"Development",
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject",
+				"-waitmutex"
+			],
+			"problemMatcher": "$msCompile",
+			"type": "shell",
+			"options": {
+				"cwd": "Z:\\Program Files\\UE_4.26"
+			}
+		}
+	]
+}

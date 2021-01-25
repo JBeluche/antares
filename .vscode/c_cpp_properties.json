@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "name": "AntaresEditor Editor Win64 Development (Antares)",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\.vscode\\compileCommands_Antares.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

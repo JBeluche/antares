@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "Antares",
+			"path": "."
+		},
+		{
+			"name": "UE4",
+			"path": "Z:\\Program Files\\UE_4.26"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"files.associations": {
+			".blade.php": "html",
+			".tpl": "html",
+			"*.rh": "cpp"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	}
+}

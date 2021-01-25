@@ -1,0 +1,128 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Antares (Debug)",
+			"request": "launch",
+			"preLaunchTask": "Antares Win64 Debug Build",
+			"program": "Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Binaries\\Win64\\UE4-Win64-Debug.exe",
+			"args": [
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Antares (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "Antares Win64 DebugGame Build",
+			"program": "Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Binaries\\Win64\\UE4-Win64-DebugGame.exe",
+			"args": [
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Antares (Development)",
+			"request": "launch",
+			"preLaunchTask": "Antares Win64 Development Build",
+			"program": "Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Binaries\\Win64\\UE4.exe",
+			"args": [
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Antares (Shipping)",
+			"request": "launch",
+			"preLaunchTask": "Antares Win64 Shipping Build",
+			"program": "Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Binaries\\Win64\\UE4-Win64-Shipping.exe",
+			"args": [
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Antares (Test)",
+			"request": "launch",
+			"preLaunchTask": "Antares Win64 Test Build",
+			"program": "Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Binaries\\Win64\\UE4-Win64-Test.exe",
+			"args": [
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "AntaresEditor (Debug)",
+			"request": "launch",
+			"preLaunchTask": "AntaresEditor Win64 Debug Build",
+			"program": "Z:\\Program Files\\UE_4.26\\Engine\\Binaries\\Win64\\UE4Editor-Win64-Debug.exe",
+			"args": [
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject"
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "AntaresEditor (DebugGame)",
+			"request": "launch",
+			"preLaunchTask": "AntaresEditor Win64 DebugGame Build",
+			"program": "Z:\\Program Files\\UE_4.26\\Engine\\Binaries\\Win64\\UE4Editor-Win64-DebugGame.exe",
+			"args": [
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject"
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "AntaresEditor (Development)",
+			"request": "launch",
+			"preLaunchTask": "AntaresEditor Win64 Development Build",
+			"program": "Z:\\Program Files\\UE_4.26\\Engine\\Binaries\\Win64\\UE4Editor.exe",
+			"args": [
+				"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject"
+			],
+			"cwd": "Z:\\Program Files\\UE_4.26",
+			"stopAtEntry": false,
+			"externalConsole": true,
+			"type": "cppvsdbg",
+			"visualizerFile": "Z:\\Program Files\\UE_4.26\\Engine\\Extras\\VisualStudioDebugging\\UE4.natvis"
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "clr",
+			"request": "launch",
+			"program": "Z:\\Program Files\\UE_4.26\\Engine\\Binaries\\DotNET\\UnrealBuildTool.exe",
+			"console": "externalTerminal",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=\"Z:\\StudioBeluche\\UnrealengineProjects\\Antares\\Antares.uproject\"",
+				"-game",
+				"-engine"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"cwd": "Z:\\Program Files\\UE_4.26"
+		}
+	]
+}
