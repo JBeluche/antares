@@ -60,7 +60,9 @@ private:
 	float CurrentPitchSpeed;
 	float CurrentRollSpeed;
  	TArray<AActor*> WaitingToFireAt;
-	AActor* AttackingEnnemy;
+	bool bCanFire;
+	FTimerHandle FireRateTimerHandle;
+
 
 
 protected:

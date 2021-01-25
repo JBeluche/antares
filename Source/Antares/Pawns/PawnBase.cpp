@@ -48,4 +48,23 @@ void APawnBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+void APawnBase::Fire()
+{
+	if(PawnProjectileBase)
+	{
+		
+		FVector Location = ProjectileSpawnPoint->GetComponentLocation();
+		FRotator Rotation = ProjectileSpawnPoint->GetComponentRotation();
+		APawnProjectileBase* TempProjectile = GetWorld()->SpawnActor<APawnProjectileBase>(PawnProjectileBase, Location, Rotation);
+		TempProjectile->SetOwner(this);
+		UE_LOG(LogTemp, Error, TEXT("Created: %s"), *TempProjectile->GetName());
+
+		TempProjectile->SetActorToChase(AttackingEnnemy);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("No projectile is set!"));
+	}
+
+}
 

@@ -6,6 +6,8 @@
 
 APawnFighter::APawnFighter()
 {
+	PrimaryActorTick.bCanEverTick = true;
+
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("Spring Arm"));
 	SpringArm->SetupAttachment(RootComponent);
 
@@ -21,6 +23,8 @@ APawnFighter::APawnFighter()
 	MaxSpeed = 500.f;
 	MinSpeed = 500.f;
 	CurrentForwardSpeed = 500.f;
+
+	
 }
 
 void APawnFighter::BeginPlay()
@@ -28,6 +32,7 @@ void APawnFighter::BeginPlay()
 	AttackTriggerBox->ToggleVisibility(false);
 	AttackTriggerBox->OnComponentBeginOverlap.AddDynamic(this, &APawnFighter::AttackTriggerBoxOverlapBegin);
 	AttackTriggerBox->OnComponentEndOverlap.AddDynamic(this, &APawnFighter::AttackTriggerBoxOverlapEnd);
+	bCanFire = true;
 
 	Super::BeginPlay();
 }
@@ -64,7 +69,7 @@ void APawnFighter::Tick(float DeltaSeconds)
 			}
 		}
 	}
-	else
+	if(bCanFire)
 	{
 		FireAtTarget();
 	}
@@ -182,5 +187,7 @@ void APawnFighter::RemoveFromWaitingList(AActor* ActortoRemove)
 
 void APawnFighter::FireAtTarget()
 {
-	
+		UE_LOG(LogTemp, Error, TEXT("Firing at %s"), *AttackingEnnemy->GetName());
+
+	GetWorld()->GetTimerManager().SetTimer(FireRateTimerHandle, this, &APawnFighter::Fire, 2.0, true);
 }

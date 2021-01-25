@@ -6,6 +6,9 @@
 #include "GameFramework/Pawn.h"
 #include "PawnProjectileBase.generated.h"
 
+class UParticleSystemComponent;
+class UBoxComponent;
+
 UCLASS()
 class ANTARES_API APawnProjectileBase : public APawn
 {
@@ -25,5 +28,22 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	void SetActorToChase(AActor* ActorToChase);
+
+private:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UParticleSystemComponent* ProjectileParticleSystem;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UBoxComponent* BoxComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	float Speed;
+
+	AActor* ChasedActor;
+
+	//Private functions
+	void ChaseTarget(float DeltaTime);
+
 
 };
