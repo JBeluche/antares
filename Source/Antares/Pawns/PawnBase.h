@@ -7,8 +7,8 @@
 #include "PawnBase.generated.h"
 
 class UCapsuleComponent;
-//class UHealthComponent;
 class APawnProjectileBase;
+class UFireComponentBase;
 
 
 UCLASS()
@@ -31,8 +31,10 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	void Fire();
 	AActor* AttackingEnnemy;
+	void FireAt(AActor *Target);
+
+
 
 private:
 	//Components
@@ -45,8 +47,11 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USceneComponent* ProjectileSpawnPoint;
 
-	/*UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-	UHealthComponent* HealthComponent;*/
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UStaticMeshComponent *AttackTriggerBox;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UFireComponentBase *FireComponent;
 
 	//Variables
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile", meta = (AllowPrivateAccess = "true"))
@@ -54,6 +59,5 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile", meta = (AllowPrivateAccess = "true"))
 	float ProjectileReach;
-
 
 };
