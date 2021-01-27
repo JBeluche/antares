@@ -30,6 +30,10 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Fire", meta = (AllowPrivateAccess = "true"))
 	float FireRate;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Fire", meta = (AllowPrivateAccess = "true"))
+	float ProjectileSpeed;
+
 	FTimerHandle FireRateTimerHandle;
 	void Fire();
 
@@ -43,5 +47,6 @@ public:
 	void AttackTriggerBoxOverlapEnd(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
 	void CheckFireCondition();
+	float GetProjectileSpeed();
 
 };

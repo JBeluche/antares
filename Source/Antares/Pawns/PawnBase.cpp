@@ -4,6 +4,8 @@
 #include "PawnProjectileBase.h"
 #include "Components/CapsuleComponent.h"
 #include "Antares/Components/FireComponentBase.h"
+#include "Antares/Components/HealthComponentBase.h"
+#include "Components/BoxComponent.h"
 
 // Sets default values
 APawnBase::APawnBase()
@@ -20,6 +22,9 @@ APawnBase::APawnBase()
 	AttackTriggerBox = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Attack Zone"));
 	AttackTriggerBox->SetupAttachment(RootComponent);
 	FireComponent = CreateDefaultSubobject<UFireComponentBase>(TEXT("Fire Component"));
+	HealthComponent = CreateDefaultSubobject<UHealthComponentBase>(TEXT("Health Component"));
+
+	
 }
 
 // Called when the game starts or when spawned
@@ -47,8 +52,6 @@ void APawnBase::SetupPlayerInputComponent(UInputComponent *PlayerInputComponent)
 
 void APawnBase::FireAt(AActor *Target)
 {
-	UE_LOG(LogTemp, Error, TEXT("Firing at %s"), *Target->GetName());
-
 	if (Target)
 	{
 		if (PawnProjectileBase)
@@ -57,10 +60,13 @@ void APawnBase::FireAt(AActor *Target)
 			FVector Location = ProjectileSpawnPoint->GetComponentLocation();
 			FRotator Rotation = ProjectileSpawnPoint->GetComponentRotation();
 			APawnProjectileBase *TempProjectile = GetWorld()->SpawnActor<APawnProjectileBase>(PawnProjectileBase, Location, Rotation);
-			TempProjectile->SetOwner(this);
-			UE_LOG(LogTemp, Error, TEXT("Created: %s"), *TempProjectile->GetName());
+			if (TempProjectile)
+			{
+				TempProjectile->SetOwner(this);
+				TempProjectile->SetActorToChase(Target, FireComponent->GetProjectileSpeed());
+				TempProjectile->BoxComponent->OnComponentBeginOverlap.AddDynamic(TempProjectile, &APawnProjectileBase::OnBeginOverlap);
 
-			TempProjectile->SetActorToChase(Target);
+			}
 		}
 		else
 		{
@@ -71,4 +77,10 @@ void APawnBase::FireAt(AActor *Target)
 	{
 		UE_LOG(LogTemp, Error, TEXT("No enemy can be found!"));
 	}
+}
+
+void APawnBase::HandleDestruction()
+{
+	UE_LOG(LogTemp, Error, TEXT("DESTRUCTION!"));
+	Destroy();
 }

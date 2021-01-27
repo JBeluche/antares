@@ -10,15 +10,13 @@ UFireComponentBase::UFireComponentBase()
 {
 	PrimaryComponentTick.bCanEverTick = false;
 	FireRate = 1.0f;
+	ProjectileSpeed = 20.f;
 }
 
 void UFireComponentBase::BeginPlay()
 {
 	Super::BeginPlay();
 	bCanFire = true;
-
-
-	
 }
 
 void UFireComponentBase::CheckFireCondition()
@@ -100,7 +98,11 @@ void UFireComponentBase::RemoveFromWaitingList(AActor* ActortoRemove)
 
 void UFireComponentBase::Fire()
 {
-	UE_LOG(LogTemp, Error, TEXT("Casting!"));
-
 	Cast<APawnBase>(GetOwner())->FireAt(TargetToShoot);
 }
+
+float UFireComponentBase::GetProjectileSpeed()
+{
+	return ProjectileSpeed;
+}
+

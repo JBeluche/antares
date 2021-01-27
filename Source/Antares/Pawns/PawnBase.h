@@ -9,6 +9,7 @@
 class UCapsuleComponent;
 class APawnProjectileBase;
 class UFireComponentBase;
+class UHealthComponentBase;
 
 
 UCLASS()
@@ -33,6 +34,8 @@ public:
 
 	AActor* AttackingEnnemy;
 	void FireAt(AActor *Target);
+	void HandleDestruction();
+
 
 
 
@@ -52,6 +55,9 @@ private:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	UFireComponentBase *FireComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+	UHealthComponentBase *HealthComponent;
 
 	//Variables
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile", meta = (AllowPrivateAccess = "true"))
