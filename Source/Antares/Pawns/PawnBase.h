@@ -36,6 +36,7 @@ public:
 	void FireAt(AActor *Target);
 	void HandleDestruction();
 
+	bool bIsShooting;
 
 
 

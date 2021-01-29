@@ -31,20 +31,27 @@ void UMovementComponentBase::ControlMovement(float DeltaSeconds)
 	GetOwner()->AddActorLocalRotation(DeltaRotation);
 }
 
-void UMovementComponentBase::ThrustInput(float Val)
+void UMovementComponentBase::ThrustInput()
 {
-	// Is there any input?
-	bool bHasInput = !FMath::IsNearlyEqual(Val, 0.f);
-	// If input is not held down, reduce speed
-	float CurrentAcc = bHasInput ? (Val * Acceleration) : (-0.5f * Acceleration);
+	bool bHasInput = true;
+	if(bHasInput)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Input spacebar. Has input"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Input spacebar. Has no input"));
+	}
+
 	// Calculate new speed
-	float NewForwardSpeed = CurrentForwardSpeed + (GetWorld()->GetDeltaSeconds() * CurrentAcc);
+	float NewForwardSpeed = CurrentForwardSpeed + (GetWorld()->GetDeltaSeconds() * 1.0f);
 	// Clamp between MinSpeed and MaxSpeed
 	CurrentForwardSpeed = FMath::Clamp(NewForwardSpeed, MinSpeed, MaxSpeed);
 }
 
 void UMovementComponentBase::MoveUpInput(float Val)
 {
+
 	// Target pitch speed is based in input
 	float TargetPitchSpeed = (Val * TurnSpeed * -1.f);
 
@@ -73,3 +80,4 @@ void UMovementComponentBase::MoveRightInput(float Val)
 	// Smoothly interpolate roll speed
 	CurrentRollSpeed = FMath::FInterpTo(CurrentRollSpeed, TargetRollSpeed, GetWorld()->GetDeltaSeconds(), 2.f);
 }
+

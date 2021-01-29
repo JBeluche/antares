@@ -19,7 +19,7 @@ public:
 	UMovementComponentBase();
 
 	/** Bound to the thrust axis */
-	void ThrustInput(float Val);
+	void ThrustInput();
 	
 	/** Bound to the vertical axis */
 	void MoveUpInput(float Val);

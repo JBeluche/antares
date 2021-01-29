@@ -17,6 +17,8 @@ void UFireComponentBase::BeginPlay()
 {
 	Super::BeginPlay();
 	bCanFire = true;
+	PawnBase = Cast<APawnBase>(GetOwner());
+
 }
 
 void UFireComponentBase::CheckFireCondition()
@@ -24,6 +26,9 @@ void UFireComponentBase::CheckFireCondition()
 	//Check if you are not shooting at someone.
 	if(!TargetToShoot)
 	{
+		PawnBase->bIsShooting = false;
+
+		
 		for(int i = 0; i < EnemyWaitingList.Num(); i++)
 		{
 			//Then check if someone is in waiting list.
@@ -36,6 +41,7 @@ void UFireComponentBase::CheckFireCondition()
 	}
 	else if(TargetToShoot)
 	{
+		PawnBase->bIsShooting = true;
 
 		if(GetWorld()->GetTimerManager().IsTimerActive(FireRateTimerHandle))
 		{
@@ -98,7 +104,7 @@ void UFireComponentBase::RemoveFromWaitingList(AActor* ActortoRemove)
 
 void UFireComponentBase::Fire()
 {
-	Cast<APawnBase>(GetOwner())->FireAt(TargetToShoot);
+	PawnBase->FireAt(TargetToShoot);
 }
 
 float UFireComponentBase::GetProjectileSpeed()

@@ -34,6 +34,8 @@ void APawnBase::BeginPlay()
 	AttackTriggerBox->OnComponentBeginOverlap.AddDynamic(FireComponent, &UFireComponentBase::AttackTriggerBoxOverlapBegin);
 	AttackTriggerBox->OnComponentEndOverlap.AddDynamic(FireComponent, &UFireComponentBase::AttackTriggerBoxOverlapEnd);
 
+	bIsShooting = false;
+
 	Super::BeginPlay();
 }
 
@@ -84,3 +86,4 @@ void APawnBase::HandleDestruction()
 	UE_LOG(LogTemp, Error, TEXT("DESTRUCTION!"));
 	Destroy();
 }
+

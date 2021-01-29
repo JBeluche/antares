@@ -6,6 +6,7 @@
 #include "Components/ActorComponent.h"
 #include "FireComponentBase.generated.h"
 
+class APawnBase;
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ANTARES_API UFireComponentBase : public UActorComponent
@@ -36,6 +37,8 @@ protected:
 
 	FTimerHandle FireRateTimerHandle;
 	void Fire();
+
+	APawnBase* PawnBase;
 
 
 public:	

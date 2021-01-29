@@ -35,9 +35,11 @@ void APawnFighter::SetupPlayerInputComponent(class UInputComponent *PlayerInputC
 	check(PlayerInputComponent);
 
 	// Bind our control axis' to callback functions
-	PlayerInputComponent->BindAxis("Thrust", MovementComponent, &UMovementComponentBase::ThrustInput);
+	PlayerInputComponent->BindAction("Thrust", IE_Pressed, MovementComponent, &UMovementComponentBase::ThrustInput);
 	PlayerInputComponent->BindAxis("MoveUp", MovementComponent, &UMovementComponentBase::MoveUpInput);
 	PlayerInputComponent->BindAxis("MoveRight", MovementComponent, &UMovementComponentBase::MoveRightInput);
+
+	
 }
 
 void APawnFighter::NotifyHit(class UPrimitiveComponent *MyComp, class AActor *Other, class UPrimitiveComponent *OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult &Hit)
